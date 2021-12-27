@@ -1,0 +1,147 @@
+/* landscape phones, less than 768px */
+@media (max-width: 767.98px) {
+    .wow {
+        animation-name: none !important;
+        visibility: visible !important;
+    }
+
+    html {
+        background-image: url(../images/hero-banner-mobile.jpg);
+    }
+
+    .brand a img {
+        max-width: 93px;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .container {
+        padding: 0 30px;
+    }
+
+    .hero-content {
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: 51px;
+        margin-bottom: 16px;
+    }
+
+    .hero-content h3 {
+        font-size: 22px;
+        line-height: 42px;
+        margin: 0;
+        margin-bottom: 18px;
+    }
+
+    .hero-content h3 span {
+        padding: 0 3px;
+    }
+
+    .hero-content h2 {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 38px;
+    }
+
+    .hero-content .form form {
+        margin-bottom: 5px;
+    }
+
+    .hero-content .form p {
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        display: block;
+    }
+
+    .hero-content .form form {
+        padding: 3px;
+    }
+
+    .hero-content .form form input {
+        font-size: 14px;
+        line-height: 17px;
+        padding: 15px;
+    }
+
+    .hero-content .form form button {
+        font-size: 14px;
+        line-height: 19px;
+        padding: 10px 18px;
+    }
+
+    footer {
+        padding-top: 23px;
+        padding-bottom: 17px;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .footer-nav ul li a {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .footer-nav ul li {
+        margin-right: 15px;
+    }
+
+    .footer-nav ul {
+        text-align: center;
+        margin-top: 22px;
+    }
+
+    .social-nav ul li {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 402px) {
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .footer-nav ul li a {
+        font-size: 13px;
+    }
+}
+
+/* iPhone 6/7/8 and smaller */
+@media (max-height: 667px) {
+
+    html,
+    body {
+        overflow: hidden;
+    }
+
+    html {
+        overflow-y: scroll;
+        height: unset;
+    }
+
+    .hero-sec {
+        position: relative;
+        z-index: 1;
+        top: unset;
+        left: unset;
+        transform: unset;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+
+    footer {
+        position: relative;
+        bottom: unset;
+        left: unset;
+        right: unset;
+    }
+}
