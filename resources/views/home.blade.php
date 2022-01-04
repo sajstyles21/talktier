@@ -34,8 +34,9 @@
                     <h3 class="wow fadeInUp"><span>Save Time! See Who's Interesting!</span></h3>
                     <h2 class="wow fadeInUp">Dating and Social Media Apps Reimagined</h2>
                     <div class="form wow fadeInUp">
-                        <form action="#">
-                            <input type="tel" placeholder="Enter phone number" required>
+                        <form action="{{ route('add-number') }}" method="post">
+                            @csrf
+                            <input type="text" name="number" placeholder="Enter phone number" required>
                             <button type="submit">Get Access</button>
                         </form>
                         <p><span class="animate-typing" data-animate-loop="false" data-type-speed="100"
