@@ -21,4 +21,22 @@ class HomeController extends Controller
 
         return back();
     }
+
+    public function termsService(Request $request)
+    {
+        return view('terms-conditions', [
+        ]);
+    }
+
+    public function cookiePolicy(Request $request)
+    {
+        return view('cookie-policy', [
+        ]);
+    }
+
+    public function privacyPolicy(Request $request)
+    {
+        return view('privacy-policy', [
+        ]);
+    }
 }

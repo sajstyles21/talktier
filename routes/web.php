@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::post('/add-number', [HomeController::class, 'addNumber'])->name('add-number');
+Route::get('/terms-of-service', [HomeController::class, 'termsService'])->name('terms-of-service');
+Route::get('/cookie-policy', [HomeController::class, 'cookiePolicy'])->name('cookie-policy');
+Route::get('/privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy-policy');
