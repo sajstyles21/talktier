@@ -10,14 +10,14 @@ class HomeController extends Controller
     public function addNumber(Request $request)
     {
         //load spreadsheet
-        $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load("numbers.xlsx");
+        $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load("iINrSDYS7SEdhmiZIfkIjo9AVyxvtNLw7f1KUppq+z4=.xlsx");
 
         $sheet = $spreadsheet->getActiveSheet();
         $sheet->insertNewRowBefore(1, 1);
         $sheet->setCellValue('A1', $request->number);
 
         $writer = new Xlsx($spreadsheet);
-        $writer->save('numbers.xlsx');
+        $writer->save('iINrSDYS7SEdhmiZIfkIjo9AVyxvtNLw7f1KUppq+z4=.xlsx');
 
         return back();
     }
