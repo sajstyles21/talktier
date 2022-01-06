@@ -2,27 +2,27 @@
     padding: 0;
     margin: 0;
     outline: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /*  */
 a,
 button {
-    transition: linear .2s;
+    transition: linear 0.2s;
     text-decoration: none;
 }
 
 ::placeholder {
-    color: #FFFFFF;
-    opacity: .8;
+    color: #ffffff;
+    opacity: 0.8;
 }
 
 :-ms-input-placeholder {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 ::-ms-input-placeholder {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 html,
@@ -86,7 +86,7 @@ header {
     font-weight: 700;
     font-size: 60px;
     line-height: 90px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 
@@ -95,14 +95,14 @@ header {
     font-weight: 400;
     font-size: 40px;
     line-height: 60px;
-    color: #FFFFFF;
+    color: #ffffff;
     width: fit-content;
     margin: auto;
     margin-bottom: 13px;
 }
 
 .hero-content h3 span {
-    background: #9B51E080;
+    background: #9b51e080;
     padding: 0 30px;
 }
 
@@ -111,7 +111,7 @@ header {
     font-weight: 400;
     font-size: 40px;
     line-height: 60px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 120px;
 }
 
@@ -120,13 +120,13 @@ header {
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .hero-content .form form {
     max-width: 658px;
     background: #ffffff24;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #ffffff;
     box-sizing: border-box;
     border-radius: 50px;
     margin: auto;
@@ -140,7 +140,7 @@ header {
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
-    color: #FFFFFF;
+    color: #ffffff;
     border: none;
     background-color: transparent;
     width: 100%;
@@ -153,8 +153,8 @@ header {
     font-weight: 500;
     font-size: 22px;
     line-height: 33px;
-    color: #FFFFFF;
-    background-color: #9B51E0;
+    color: #ffffff;
+    background-color: #9b51e0;
     border-radius: 50px;
     padding: 18px 30px;
     cursor: pointer;
@@ -165,7 +165,7 @@ header {
 }
 
 .hero-content .form form button:hover {
-    background-color: #6660E8;
+    background-color: #6660e8;
 }
 
 footer {
@@ -202,11 +202,11 @@ footer {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .footer-nav ul li a:hover {
-    color: #9B51E0;
+    color: #9b51e0;
 }
 
 .social-nav ul {
@@ -233,19 +233,77 @@ footer {
     width: 27.12px;
     height: 27.12px;
     fill: #ffffff;
-    transition: linear .2s;
+    transition: linear 0.2s;
 }
 
 .social-nav ul li a svg:hover {
-    fill: #9B51E0;
+    fill: #9b51e0;
 }
 
 .social-nav ul li a.icon-twitter svg {
     fill: none;
-    stroke: #FFFFFF;
+    stroke: #ffffff;
     stroke-width: 8%;
 }
 
 .social-nav ul li a.icon-twitter svg:hover {
-    stroke: #9B51E0;
+    stroke: #9b51e0;
+}
+
+.parent {
+    position: absolute;
+    width: 700px;
+    height: 602px;
+    left: 0px;
+    top: -44px;
+
+    background: url(/images/thank-you-floral.png);
+}
+
+.sub {
+    position: absolute;
+    height: 53px;
+    left: 36.35%;
+    right: 36.07%;
+    top: calc(50% - 53px / 2 - 11.5px);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 52px;
+    /* identical to box height */
+    text-align: center;
+    color: #5e5873;
+}
+
+#number:focus, #number:active {
+    background: transparent;
+}
+
+.text {
+    position: absolute;
+    height: 85px;
+    left: 9.9%;
+    right: 11.74%;
+    top: calc(50% - 85px / 2 + 76.5px);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 17px;
+    /* or 94% */
+    text-align: center;
+    /* 1) Theme Color / Body - Text */
+    color: #6e6b7b;
+}
+
+.instagram {
+    position: absolute;
+    width: 61px;
+    height: 45px;
+    left: 323px;
+    top: 464px;
+
+    background: #9b51e0;
+    border-radius: 5px;
 }

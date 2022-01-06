@@ -2,6 +2,15 @@
 <html style="background-image:none" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K53FQ374F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3K53FQ374F');
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,7 +98,7 @@
                         <ul>
                             <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
                             <li><a href="{{ route('cookie-policy') }}">Cookie Policy</a></li>
-                            <li><a href="{{ route('terms-of-service') }}">Tearm of Service</a></li>
+                            <li><a href="{{ route('terms-of-service') }}">Terms of Service</a></li>
                         </ul>
                     </nav>
                 </div>
