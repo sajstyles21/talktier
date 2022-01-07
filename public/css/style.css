@@ -280,6 +280,15 @@ footer {
     background: transparent;
 }
 
+.sweet-alert button{
+    padding:13px 0px 13px 26px!important;
+    background-image: url("../images/instagram.png");
+}
+
+.inline {
+    color:#fff;
+}
+
 .text {
     position: absolute;
     height: 85px;
