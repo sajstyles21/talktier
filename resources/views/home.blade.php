@@ -58,7 +58,7 @@
                                 placeholder="Enter phone number with country code prefix" required>
                             <button type="button" id="send-sms">Get Access</button>
                         </form>
-                        <p style="opacity:0.6">By subscribing you agree to receive 3 automated marketing text messages at the phone number
+                        <p style="opacity:0.6;font-size:15px;">By subscribing you agree to receive 3 automated marketing text messages at the phone number
                             provided. Text STOP to unsubscribe, Msg and data rates may apply. View <a class="inline" href="{{ route('terms-of-service') }}">Terms of use</a> and
                             <a class="inline" href="{{ route('privacy-policy') }}">privacy policy</a>.</p>
 
