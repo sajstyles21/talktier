@@ -52,15 +52,18 @@
                                 data-cursor-speed="900">
                                 Gain Early Access to our Beta Launch
                             </span></p>
-                        <form action="#" method="post">
+                        <form action="#" method="post" id="form">
                             @csrf
                             <input type="number" name="number" id="number" autocomplete="off"
-                                placeholder="Enter phone number with country code prefix" required>
+                                placeholder="Enter Phone Number" required>
                             <button type="button" id="send-sms">Get Access</button>
                         </form>
-                        <p style="opacity:0.6;font-size:15px;">By subscribing you agree to receive 3 automated marketing text messages at the phone number
-                            provided. Text STOP to unsubscribe, Msg and data rates may apply. View <a class="inline" href="{{ route('terms-of-service') }}">Terms of use</a> and
-                            <a class="inline" href="{{ route('privacy-policy') }}">privacy policy</a>.</p>
+                        <p style="opacity:0.6;font-size:13px;">By subscribing you agree to receive 3 automated marketing
+                            text messages at the phone number
+                            provided. Text STOP to unsubscribe, Msg and data rates may apply. View <a
+                                class="inline" href="{{ route('terms-of-service') }}">Terms of use</a> and
+                            <a class="inline" href="{{ route('privacy-policy') }}">privacy policy</a>.
+                        </p>
 
                     </div>
                 </div>
@@ -185,6 +188,65 @@ integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6ji
 
                 },
             });
+        });
+
+        $("#form").submit(function(e) {
+            e.preventDefault();
+            // Get input field values
+            var number = $('input[name=number]').val();
+            if (number == '') {
+                swal({
+                    title: '',
+                    text: 'Please enter number!',
+                    type: "warning",
+                    timer: 1500,
+                    showCancelButton: false,
+                    showConfirmButton: false
+                }).then(
+                    function() {},
+                    // handling the promise rejection
+                    function(dismiss) {
+                        if (dismiss === 'timer') {
+                            //console.log('I was closed by the timer')
+                        }
+                    }
+                )
+                return false;
+            }
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('add-number') }}",
+                data: 'number=' + number,
+                dataType: 'json',
+                enctype: 'multipart/form-data',
+                beforeSend: function() {
+                    swal({
+                        title: "Thank you!",
+                        text: 'You will be the first to know when the App Launches! We sent you a text message to confirm your number. Follow us on Instagram for a sneak peek!',
+                        type: "success",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: " ",
+                        closeOnConfirm: true,
+                    }, function(isConfirm) {
+                        window.location = 'https://www.instagram.com/talktier/';
+
+                    });
+                    $("#number").val('');
+                },
+                success: function(response) {
+
+                },
+                complete: function() {
+
+                },
+            });
+
         });
 
     });

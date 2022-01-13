@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
     public function addNumber(Request $request)
     {
-        $receiverNumber = '+'.$request->number;
+        $receiverNumber = '+1'.$request->number;
         $message = "Thank you for requesting Early Access to TalkTier, we'll Message you when it Launches! Reply STOP to opt out of receiving future messages.";
   
         try {
