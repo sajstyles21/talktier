@@ -11,7 +11,8 @@ class HomeController extends Controller
 {
     public function addNumber(Request $request)
     {
-        $receiverNumber = '+1'.$request->number;
+        $number = str_replace(' ', '', str_replace('-', '', $request->number));
+        $receiverNumber = '+1'.$number;
         $message = "Thank you for requesting Early Access to TalkTier, we'll Message you when it Launches! Reply STOP to opt out of receiving future messages.";
   
         try {
@@ -30,7 +31,7 @@ class HomeController extends Controller
 
                 $sheet = $spreadsheet->getActiveSheet();
                 $sheet->insertNewRowBefore(1, 1);
-                $sheet->setCellValue('A1', $request->number);
+                $sheet->setCellValue('A1', $number);
 
                 $writer = new Xlsx($spreadsheet);
                 $writer->save('iINrSDYS7SEdhmiZIfkIjo9AVyxvtNLw7f1KUppq+z4=.xlsx');

@@ -54,7 +54,7 @@
                             </span></p>
                         <form action="#" method="post" id="form">
                             @csrf
-                            <input type="number" name="number" id="number" autocomplete="off"
+                            <input type="tel" name="number" id="number" autocomplete="off"
                                 placeholder="Enter Phone Number" required>
                             <button type="button" id="send-sms">Get Access</button>
                         </form>
